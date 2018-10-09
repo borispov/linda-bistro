@@ -1,0 +1,16 @@
+//-  mixin for creating menu items. 
+
+mixin menu_item(dish, price)
+  li.list-item 
+    .dish-item
+      h4.dish-item__title #{dish}
+      span.dish-item__separator
+      p.dish-item__price #{price}
+
+mixin typeof_menu(menuType)
+  div(class='linda-menu__card')
+    h3.linda-menu__name #{menuType}
+    ul.menu__list
+      if block
+        block
+        

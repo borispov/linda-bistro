@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,400,500,700&subset=hebrew')
+// Colors, siings etc.. 
+
+// colors: 
+
+$smokyblack: #130E04 //darkBlack
+$brown: #523D12 // Pullman Brown. yeah
+$black: #1B1D26 // light tint of black
+$white: #EAEAEB // Isabelline. 
+$darkgrey: #425955 // field grey 
+$eggshell: #F1F2D8 // eggshell 
+$green: #BFBD9F // someGreen
+
+// reset: 
+
+*
+  padding: 0
+  margin: 0
+  box-sizing: 0
+  font-size: 10px // in order to use REM's more conviniently.
+  font-family: Helvetica, sans-serif
+  align-content: right
+
+// headings 
+
+h1
+  font-family: 'Rubik'
+  font-size: 5rem
+  line-height: 1.05
+h2
+  font-size: 4.23rem
+  line-height: 1.25
+h3
+  font-size: 3rem
+  line-height: 1.25
+h4
+  font-size: 2.6rem
+  line-height: 1.22
+h5
+  font-size: 1.9rem
+
+
+.container-desk
+  margin: 0 auto
+  max-width: 970px
+
+.container
+  @media (min-width: 992px) 
+    width: 960px
+  @media (min-width: 768px )
+    max-width: 720px
+  @media (min-width: 576px)
+    max-width: 540px
+  width: 100%
+  margin-left: auto
+  margin-right: auto
+  padding-left: 10px
+  padding-right: 10px
