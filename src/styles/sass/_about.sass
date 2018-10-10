@@ -2,10 +2,8 @@
   height: 400px
   // margin-top: 1px
   display: flex
-  // border-top: 1px solid $brown
   box-shadow: 0 2px 10px 6px transparentize($darkgrey, 0.2)
   &__description
-    // background: $eggshell
     background: darken($eggshell, 6)
     text-align: right
     padding-top: 3.5rem
@@ -15,6 +13,7 @@
     .about__title
       color: $smokyblack
     .about__para
+      text-shadow: 0 1px 2px rgba(0,0,0,0.20)
       color: $black
       margin-top: 1.5rem
       width: 500px
@@ -26,11 +25,17 @@
       font-size: 1.6rem
       background: $black
       color: $white
-      // border: 2.2px solid $darkgrey
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1)
       font-weight: 300
       border: none
-      box-shadow: 0 1px 1px 2px rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
+      box-shadow: 0 6px 10px -3px rgba(0,0,0,0.5)
+      outline-color: gold
+      transform: translate(0)
+      transition: all 0.3s ease-in-out
       &:hover
+        transition: all 0.3s ease-in-out
+        transform: translateY(-2px)
+        box-shadow: -2px 12px 20px -6px rgba(20,20,20,0.38)
         text-shadow: 0 2px 6px rgba(0,0,0,0.5)
         color: darken($eggshell, 10)
   .about__photo
@@ -43,3 +48,15 @@
       border-radius: 2px
     flex-basis: 1
     flex: 2 1 35%
+
+@media (max-width: 768px) and (min-width: 370px) 
+  .about__photo
+    display: none
+  .about__description
+    text-align: center
+    .about__para
+      margin: 12px auto
+      margin-bottom: 24px
+      max-width: 80vw
+      // font-size: 
+      @include fluid-type(370px, 768px, 14px , 16px)
