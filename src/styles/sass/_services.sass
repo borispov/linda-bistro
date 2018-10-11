@@ -1,0 +1,33 @@
+.services
+  background-color: rgba(60,10,10,0.35)
+  &__title
+    padding-top: 100px
+    text-align: center
+    color: lighten($white, 50)
+    padding-bottom: 80px
+    text-shadow: 1px 1px 2px rgba(20,20,20,0.2)
+
+  .grid
+    display: grid
+    grid-template-columns: repeat(auto-fill, minmax(min-content, 450px))
+    grid-template-rows: repeat(auto-fit, auto)
+    grid-gap: 25px
+    justify-content: center
+    .services__card
+      grid-column: 1 / span 2
+      grid-area: span 2
+      display: flex
+      justify-content: space-evenly
+      flex-flow: row nowrap
+      .flex-col
+        margin-right: 20px
+        display: flex
+        flex-flow: column wrap
+      .services__card-title
+      .services__img
+      .services__text
+        line-height: 1.45
+
+    img
+      height: 40px 
+      width: 50px
