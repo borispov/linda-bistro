@@ -1,19 +1,55 @@
-.info  
-  padding-top: 115px
-  padding-bottom: 80px
+.info
+  background: $black
+  height: 500px
+  .info__overlap
+    top: -100px
+    left: 50% 
+    transform: translateX(-250px)
+    color: white
+    position: absolute
+    width: 500px
+    height: 500px
+    box-shadow: 0 2px 4px 2px rgba(0,0,0,0.12)
+    background-color: lighten(rgba(60,10,10,1), 85)
+    box-sizing: border-box
+    padding: 15px
+    border-radius: 5px
+    z-index: 1
+    .overlap__image
+      z-index: -1
+      position: absolute
+      border-radius: 2px
+      width: 500px
+      margin-top: -15px
+      margin-right: -15px
+      height: 500px
+      background: url('../../assets/img/pexels-photo.jpeg') no-repeat center
+      background-color: rgba(25,10,55,1)
+      filter: grayscale(100%)
+      opacity: 0.9
+      background-blend-mode: color-dodge
+
+  position: relative  
   .info__flex
     display: flex
     flex-flow: row
     justify-content: center
     .info__block
-      margin: 0 50px
-      padding: 8px
+      // margin-top: 50px
+      padding-top: 80px
       max-width: 250px
-      // box-shadow: 0 1px 1px 2px rgba(0,0,0,0.08)
       .info__title
+        position: relative
         font-weight: bold
         text-align: center
         margin-bottom: 7px
+        &:after
+          content: ''
+          position: absolute
+          bottom: 15%
+          right: 0
+          width: 105%
+          border-bottom: 7px solid hsla(20, 88%, 50%, 0.86)
       .info__text
         font-size: 1.6rem
         text-shadow: 0 1px 1px rgba(20,20,20,0.2)
@@ -22,12 +58,33 @@
       .info__subtitle
         text-align: right
         font-size: 1.8rem
+  // .info__call
+  //   padding-top: 50px
+  //   text-align: center
+  //   .call__icon 
+  //     margin: 0 5px 0 10px
+  //   .call__title 
+  //     font-weight: 700
+  //     letter-spacing: 5px
   .info__call
-    padding-top: 50px
+    margin-top: 100px
+    margin-left: auto
+    margin-right: auto
+    padding: 9px 25px
+    background: $white
+    width: max-content
+    border-radius: 32px
+    display: block
+    color: red
     text-align: center
-    .call__icon 
-      margin: 0 5px 0 10px
-    .call__title 
-      font-weight: 700
-      letter-spacing: 5px
-
+    .call__icon
+      padding: 5px
+      background: $green
+      border-radius: 50%
+      vertical-align: bottom
+      // display: inline-block
+    .call__title
+      // background: $white
+      font-size: 2.4rem
+      // padding-right: 20px
+      display: inline-block

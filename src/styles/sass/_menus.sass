@@ -8,8 +8,6 @@
     box-shadow: 0 2px 6px 0 rgba(250,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08)
     border-radius: 4px
     grid-column: span 2
-    &:nth-last-of-type
-      
 
   &__title
     padding-top: 100px
@@ -23,6 +21,7 @@
     grid-template-columns: repeat(auto-fit, minmax(130px, 2fr))
     grid-gap: 30px
     padding: 15px
+
   &__name
     padding-top: 10px
     text-align: center
@@ -57,3 +56,10 @@
       margin: 0 5px
     & > *
       font-size: 1.6rem
+
+@media (min-width: 1200px)
+  .linda-menu__flex
+    grid-template-columns: repeat(3, minmax(130px, 1fr))
+  .linda-menu__card
+    grid-column: 1 / span 2
+    grid-area: span 2  

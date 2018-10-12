@@ -1,5 +1,7 @@
 .services
-  background-color: rgba(60,10,10,0.35)
+  position: relative
+  // background-color: rgba(60,10,10,0.35)
+  background: linear-gradient(to top, #43c6ac, #f8ffae)
   &__title
     padding-top: 100px
     text-align: center
@@ -9,15 +11,17 @@
 
   .grid
     display: grid
-    grid-template-columns: repeat(auto-fill, minmax(min-content, 450px))
+    // grid-template-columns: repeat(auto-fill, minmax(min-content, 450px))
+    grid-template-columns: repeat(2, minmax(360px, 1fr))
     grid-template-rows: repeat(auto-fit, auto)
     grid-gap: 25px
     justify-content: center
+    padding-bottom: 160px
     .services__card
       grid-column: 1 / span 2
       grid-area: span 2
       display: flex
-      justify-content: space-evenly
+      justify-content: center
       flex-flow: row nowrap
       .flex-col
         margin-right: 20px
@@ -26,8 +30,22 @@
       .services__card-title
       .services__img
       .services__text
+        margin-top: 7px
+        max-width: 240px
         line-height: 1.45
 
     img
       height: 40px 
       width: 50px
+
+@media (max-width: 726px)
+  .services
+    .grid
+      display: block
+    .services__text
+      padding-bottom: 25px
+@media (min-width: 1400px)
+  .services
+    .grid
+      grid-template-columns: repeat(2, minmax(360px, 480px))
+      grid-template-rows: auto auto
