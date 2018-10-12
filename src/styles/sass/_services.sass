@@ -1,7 +1,8 @@
 .services
   position: relative
-  // background-color: rgba(60,10,10,0.35)
-  background: linear-gradient(to top, #43c6ac, #f8ffae)
+  background: #BAA8A8
+  background-image: -webkit-radial-gradient(80% 10%, circle, $eggshell, transparent),-webkit-radial-gradient(80% 50%, circle, #EFDDB7, transparent),-webkit-radial-gradient(50% 50%, 40em 40em, #baa8a8, transparent),-webkit-radial-gradient(10% 10%, circle, #baa8a8, transparent)
+
   &__title
     padding-top: 100px
     text-align: center
@@ -28,8 +29,10 @@
         display: flex
         flex-flow: column wrap
       .services__card-title
+        color: darken($darkgrey, 20)
       .services__img
       .services__text
+        color: $darkgrey
         margin-top: 7px
         max-width: 240px
         line-height: 1.45

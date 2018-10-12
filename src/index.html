@@ -11,24 +11,24 @@
     <div class="header">
       <div class="menu-wrap">
         <ul class="menu menu--left">
-          <li class="menu__item"><a class="menu__link" href="">תפריט</a></li>
-          <li class="menu__item"><a class="menu__link" href="">מיוחדים</a></li>
+          <li class="menu__item"><a class="menu__link -scroll" href="#menus">תפריט</a></li>
+          <li class="menu__item"><a class="menu__link -scroll" href="#services">אירועים</a></li>
         </ul>
         <div class="menu__logo">
           <div class="logo__img"></div>
         </div>
         <ul class="menu menu--right">
-          <li class="menu__item"><a class="menu__link" href="">אודותינו</a></li>
-          <li class="menu__item"><a class="menu__link" href="">צור קשר</a></li>
+          <li class="menu__item"><a class="menu__link -scroll" href="#about">אודותינו</a></li>
+          <li class="menu__item"><a class="menu__link -scroll" href="#info">צור קשר</a></li>
         </ul>
       </div>
       <div class="header__heading">
         <h1 class="heading__title">ביסטרו לינדה</h1>
         <p class="heading__subtitle">בואו להינות מבשרים ודגים טריים,יין וקינוחים מיוחדים</p>
-        <button class="heading__btn btn--menu" type="submit">התפריט שלנו</button>
+        <button class="heading__btn btn--menu -scroll" type="submit" href="#menus">התפריט שלנו</button>
       </div>
     </div>
-    <section class="about">
+    <section class="about" id="about">
       <div class="about__photo">
         <div class="photo__img"></div>
       </div>
@@ -40,14 +40,14 @@
           עיצוב המסעדה משרה שלווה על קהל הלקוחות שמאופיינים באהבתם לאנשים, ליין ובעיקר לאוכל. 
           צוות המסעדה נותן לכל אורח שירות אדיב, חם ומחבק.
         </p>
-        <button class="about__btn btn--call">הזמינו מקום !</button>
+        <button class="about__btn btn--call -scroll">הזמינו מקום !</button>
       </div>
     </section>
-    <section class="special-offer">
+    <section class="special-offer" id="special">
       <h1 class="special-offer__title">המיוחדים</h1>
       <p class="special-offer__subtitle">מדי שבוע אנו מגישים מנות מיוחדות מחוץ לתפריט ממרכיבים טריים ומגוונים</p>
     </section>
-    <section class="linda-menu">
+    <section class="linda-menu" id="menus">
       <h1 class="linda-menu__title">הצצה לתפריט</h1>
       <div class="linda-menu__flex">
             <div class="linda-menu__card">
@@ -352,7 +352,7 @@
             </div>
       </div>
     </section>
-    <div class="services">
+    <div class="services" id="services">
       <h1 class="services__title">לינדה מציעה</h1>
       <div class="flex">
         <div class="grid">
@@ -387,7 +387,8 @@
         </div>
       </div>
     </div>
-    <div class="info">
+    <div class="info" id="info">
+      <div class="info__bg"></div>
       <div class="info__overlap">
         <div class="overlap__image"></div>
         <div class="info__flex">
@@ -399,15 +400,15 @@
             <p class="info__text">12:00 עד אחרון הלקוחות</p>
           </div>
         </div>
-        <div class="info__call"><img class="call__icon" src="./assets/icons/phone-call-red.png">
+        <div class="info__call"><img class="call__icon" src="./assets/icons/call.png">
           <h4 class="call__title">053-937-7003</h4>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <h3 class="footer__name"><a class="footer__link" href="https://www.linkedin.com/in/boris-povolotsky/">created by<span> Boris Povolotsky</span></a></h3>
+      <p class="footer__rights">All Copyright resereved &copy;</p>
+    </footer>
   </body>
-  <footer class="footer">
-    <h3 class="footer__name"><a class="footer__link" href="#">Created By: Boris Povolotsky</a></h3>
-    <p class="footer__rights">All Copyright resereved &copy;</p>
-  </footer>
   <script src="./js/app.js"></script>
 </html>
