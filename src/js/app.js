@@ -1,5 +1,5 @@
-import { modalFuncs } from './modal.js'
-import smoothScroll from './scroll.js'
+// import { modalFuncs } from './modal.js'
+// import smoothScroll from './scroll.js'
 
 // function to execute the imported/local functions in a single listener for page load.
 const onLoadFuncs = () => {

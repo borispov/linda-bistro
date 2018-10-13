@@ -5,7 +5,7 @@
 
 // this was thanks to Gurjit
 
-export default () => {
+const smoothScroll = () => {
   // add click event for menu button and order button
   const menuBtn = document.querySelector('.heading__btn')
   const orderNowBtn = document.querySelector('.about__btn')
@@ -41,8 +41,6 @@ export default () => {
       })
     })
   })
-
-  const clickHandler = () => {}
 
   // Gurjit's Magic .!.
 
