@@ -1,71 +1,34 @@
-// scrolling navbar transparent
-const navbarClass = 'menu-wrap'
-const navbarTrans = 'menu-wrap--transparent'
+import { modalFuncs } from './modal.js'
+import smoothScroll from './scroll.js'
 
-const navbar = document.querySelector('.menu-wrap')
-let prevYPos = window.pageYOffset
-
-window.onscroll = () => {
-  let currentYPos = window.pageYOffset
-  if (currentYPos > prevYPos) {
-    navbar.classList.add(navbarTrans)
-  } else {
-    navbar.classList.remove(navbarTrans)
-  }
-  prevYPos = currentYPos
+// function to execute the imported/local functions in a single listener for page load.
+const onLoadFuncs = () => {
+  smoothScroll()
+  modalFuncs()
+  interactiveHeader()
 }
 
-// add click event for menu button to scroll into Menus sections
-const menuButton = document.querySelector('.heading__btn')
-const menus = document.getElementById('menus')
-menuButton.addEventListener('click', () => menus.scrollIntoView())
+document.addEventListener('DOMContentLoaded', onLoadFuncs)
 
-// Smooth Scrolling Implementation.  Credits to: Gurjit Singh -- for writing Medium article on the subject.
+// Header Changing Transparency.
+const interactiveHeader = function() {
+  const navbarTrans = 'menu-wrap--transparent'
+  const navbar = document.querySelector('.menu-wrap')
 
-// grab all anchor tags that have scroll class
-const aLinks = document.querySelectorAll('.-scroll')
+  // capture Y value before scroll
+  let prevYPos = window.pageYOffset
 
-// assign eventHandler to each of them.
-aLinks.forEach(node => {
-  node.addEventListener('click', e => {
-    e.preventDefault()
-
-    const targetId = e.target.href.split('#')[1]
-
-    const targetNode = document.getElementById(targetId)
-
-    const anim = requestAnimationFrame(timestamp => {
-      const stamp = timestamp || new Date().getTime()
-      const duration = 1200
-      const start = stamp
-
-      const startOffset = window.pageYOffset
-
-      const scrollEndElemTop = targetNode.getBoundingClientRect().top
-
-      scrollToNode(start, stamp, duration, scrollEndElemTop, startOffset)
-    })
-  })
-})
-
-// Gurjit's Magic .!.
-
-const easyInCubic = t => t * t * t
-// Gurjit's Magic function
-const scrollToNode = (startTime, currentTime, dur, targetPos, startPos) => {
-  const runtime = currentTime - startTime
-  let progress = runtime / dur
-
-  progress = Math.min(progress, 1)
-
-  const ease = easyInCubic(progress)
-
-  window.scroll(0, startPos + targetPos * ease)
-
-  if (runtime < dur) {
-    requestAnimationFrame(timestamp => {
-      const currentTime = timestamp || new Date().getTime()
-      scrollToNode(startTime, currentTime, dur, targetPos, startPos)
-    })
+  // add onscroll eventListener on window object
+  window.onscroll = () => {
+    // capture Y value after scroll and compare to previous.
+    // If recent scroll is higher, add transparency className, if it's lower, remove the className if exists.
+    let currentYPos = window.pageYOffset
+    if (currentYPos > prevYPos) {
+      navbar.classList.add(navbarTrans)
+    } else {
+      navbar.classList.remove(navbarTrans)
+    }
+    // set the former scroll position to the recent latter one.
+    prevYPos = currentYPos
   }
 }

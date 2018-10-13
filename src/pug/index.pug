@@ -1,31 +1,23 @@
 html(lang="en")
   include ./includes/head.pug
   
+  //- Hebrew Right To Left
   body(dir='rtl')
 
-    //-  All our header shit 
+    //- It's A single page website 100%.
+    //- Everything kinda speaks for itself here. 
     include ./includes/header.pug
     
-    section.about#about
-      .about__photo
-        .photo__img
-      .about__description
-        h2.about__title מי אנחנו? 
-        p.about__para לינדה היא מסעדת ביסטרו הממוקמת בעיר הדרומית אשקלון.
-                      | במסעדה ניתן להנות מתפריט עשיר אשר כולל בין היתר סטייקים, מנות גורמה, 
-                      | בשרים ודגים טריים. ייחודה של המסעדה מתבטא באווירה הרומנטית שיש במקום. 
-                      | עיצוב המסעדה משרה שלווה על קהל הלקוחות שמאופיינים באהבתם לאנשים, ליין ובעיקר לאוכל. 
-                      | צוות המסעדה נותן לכל אורח שירות אדיב, חם ומחבק.
-        button.about__btn.btn--call.-scroll הזמינו מקום !
-    section.special-offer#special
-      h1.special-offer__title המיוחדים
-      p.special-offer__subtitle מדי שבוע אנו מגישים מנות מיוחדות מחוץ לתפריט ממרכיבים טריים ומגוונים
+    include ./includes/overlay.pug
+        
+    include ./includes/about.pug
 
-    //-  including menus template. it's way too Long in pug lanD
     include ./includes/menus.pug
+    
     include ./includes/services.pug
+    
     include ./includes/info.pug
+    
     include ./includes/footer.pug
     
-
-  script(src="./js/app.js")
+  script(type="module" src="./js/app.js")

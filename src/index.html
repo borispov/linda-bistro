@@ -28,6 +28,9 @@
         <button class="heading__btn btn--menu -scroll" type="submit" href="#menus">התפריט שלנו</button>
       </div>
     </div>
+    <div class="overlay -hidden" id="modal" tabindex="0"><a class="overlay__close" href="javascript:void(0)">&times;</a>
+      <div class="overlay__content"><a class="overlay__link -scroll" href="#menus">תפריט</a><a class="overlay__link -scroll" href="#services">שרותי לינדה</a><a class="overlay__link -scroll" href="#about">אודותינו</a><a class="overlay__link -scroll" href="#info">יצירת קשר</a></div>
+    </div>
     <section class="about" id="about">
       <div class="about__photo">
         <div class="photo__img"></div>
@@ -42,10 +45,6 @@
         </p>
         <button class="about__btn btn--call -scroll">הזמינו מקום !</button>
       </div>
-    </section>
-    <section class="special-offer" id="special">
-      <h1 class="special-offer__title">המיוחדים</h1>
-      <p class="special-offer__subtitle">מדי שבוע אנו מגישים מנות מיוחדות מחוץ לתפריט ממרכיבים טריים ומגוונים</p>
     </section>
     <section class="linda-menu" id="menus">
       <h1 class="linda-menu__title">הצצה לתפריט</h1>
@@ -410,5 +409,5 @@
       <p class="footer__rights">All Copyright resereved &copy;</p>
     </footer>
   </body>
-  <script src="./js/app.js"></script>
+  <script type="module" src="./js/app.js"></script>
 </html>
