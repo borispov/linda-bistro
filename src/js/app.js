@@ -46,8 +46,9 @@ const smoothScroll = () => {
 
       const targetId =
         e.target.localName === 'button'
-          ? e.target.baseURI.split('#')[1]
-          : e.target.href.split('#')[1]
+          ? node.getAttribute('href').split('#')[1]
+          : // e.target.baseURI.split('#')[1]
+            e.target.href.split('#')[1]
 
       const targetNode = document.getElementById(targetId)
 

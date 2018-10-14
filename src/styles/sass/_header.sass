@@ -44,12 +44,18 @@
       &__logo
         .logo__img
           cursor: pointer
-          background: url('../../assets/img/chef.svg')
+          // background: url('../../assets/img/chef.svg')
+          background: url('../../assets/img/logo_transparent.png') no-repeat 
           margin-top: 10px
           background-position: center
-          background-size: cover
-          width: 35px
-          height: 35px
+          // background-size: 120px 150px
+          background-size: 200px 200px
+          width: 200px
+          height: 40px
+          @media (min-width: 800px) and (max-width: 950px)
+            background-size: 250px 250px
+            background-position: 10% 50%
+            width: 55px
 
 .header__heading
   background: url('../../assets/img/wine.jpeg') center / cover no-repeat fixed

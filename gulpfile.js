@@ -72,22 +72,15 @@ gulp.task('injectBuild', function() {
 })
 
 gulp.task('scripts', function() {
-  return (
-    gulp
-      .src(paths.jsFiles)
-      .pipe(concat('app.js'))
-      .pipe(rename('app.min.js'))
-      // .pipe(
-      //   babel({
-      //     presets: ['es2015']
-      //   })
-      // )
-      .pipe(uglify())
-      .pipe(gulp.dest('./dist/js'))
-      .on('error', function(err) {
-        console.log(err.toString())
-      })
-  )
+  return gulp
+    .src(paths.jsFiles)
+    .pipe(concat('app.js'))
+    .pipe(rename('app.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./dist/js'))
+    .on('error', function(err) {
+      console.log(err.toString())
+    })
 })
 
 // Gulp task to minify HTML files
