@@ -49,7 +49,7 @@ gulp.task('styles', function() {
 })
 
 paths = {
-  jsFiles: './src/js/*.js',
+  jsFiles: './src/js/app.js',
   jsDest: './dist/js',
   cssDest: './dist/styles',
   cssDev: './src/styles/css/*.css'
@@ -72,15 +72,17 @@ gulp.task('injectBuild', function() {
 })
 
 gulp.task('scripts', function() {
-  return gulp
-    .src(paths.jsFiles)
-    .pipe(concat('app.js'))
-    .pipe(rename('app.min.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'))
-    .on('error', function(err) {
-      console.log(err.toString())
-    })
+  return (
+    gulp
+      .src(paths.jsFiles)
+      .pipe(concat('app.js'))
+      .pipe(rename('app.min.js'))
+      .pipe(uglify())
+      .pipe(gulp.dest('./dist/js'))
+      .on('error', function(err) {
+        console.log(err.toString())
+      })
+  )
 })
 
 // Gulp task to minify HTML files
@@ -102,7 +104,8 @@ gulp.task('clean', function() {
 })
 
 // Gulp task to minify all files
-gulp.task('build', ['clean'], function() {
+// gulp.task('build', ['clean'], function() {
+gulp.task('build', function() {
   runSequence('styles', 'scripts', 'pages', 'injectBuild')
 })
 
