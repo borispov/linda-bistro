@@ -20,7 +20,7 @@ const toggleModal = (() => {
   }
 })()
 
-const modalFuncs = () => {
+export const modalFuncs = () => {
   const openIcon = document.querySelector('.logo__img')
   const closeIcon = document.querySelector('.overlay__close')
   openIcon.addEventListener('click', toggleModal.openModal)

@@ -5,7 +5,8 @@
 
 // this was thanks to Gurjit
 
-const smoothScroll = () => {
+// const smoothScroll = () => {
+export default () => {
   // add click event for menu button and order button
   const menuBtn = document.querySelector('.heading__btn')
   const orderNowBtn = document.querySelector('.about__btn')

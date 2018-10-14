@@ -7,7 +7,7 @@
   top: 0
   left: 0
   background-color: #000
-  background-color: rgba(20,20,20,0.9)
+  background-color: rgba(20,20,20,0.98)
   transition: all 0.4s ease-in-out
   z-index: 9
   &__content
@@ -49,6 +49,8 @@
     display: block
     transition: .3s ease-in-out
     text-shadow: 0 1px 2px rgba(20,20,20,0.2)
+    @media (max-width: 450px)
+      font-size: 4.5rem
     &:hover
       color: hsla(10, 86%, 45, 0.75)
     & a
@@ -58,10 +60,10 @@
   transition: all .4s ease-in
   top: -2000px
 
-@media screen and (max-height: 450px) 
-  .overlay a 
-    font-size: 2rem
+@media screen and (max-width: 450px) 
+  // .overlay a 
+    // font-size: 2.4rem
   .overylay__content
-    font-size: 2.5rem
+    font-size: 2.3rem
     top: 15px
     right: 35px
