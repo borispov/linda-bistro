@@ -67,7 +67,7 @@ gulp.task('injectBuild', function() {
   return gulp
     .src('./dist/*.html')
     .pipe(inject(gulp.src(paths.cssDest + '/**/*.css'), { relative: true }))
-    .pipe(inject(gulp.src(paths.jsDest + '/*.js'), { relative: true }))
+    .pipe(inject(gulp.src(paths.jsDest + '/*.min.js'), { relative: true }))
     .pipe(gulp.dest('./dist'))
 })
 

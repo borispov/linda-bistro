@@ -244,6 +244,7 @@ h5 {
     .about .about__photo .photo__img {
       position: relative;
       z-index: 1;
+      background-color: #130E04;
       background: url("../../assets/img/bnw.jpeg") no-repeat;
       box-shadow: -2px 4px 6px 4px rgba(0, 0, 0, 0.4), 0 0 0 2px rgba(10, 10, 10, 0.2);
       background-position: center;
