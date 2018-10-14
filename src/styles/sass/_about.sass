@@ -54,14 +54,20 @@
     flex-basis: 1
     flex: 2 1 35%
 
-@media (max-width: 768px) and (min-width: 370px) 
+// @media (max-width: 768px) and (min-width: 320px) 
+@media (max-width: 768px)
+  .about
+    height: auto
+    display: block
   .about__photo
     display: none
   .about__description
+    padding-bottom: 30px
+    width: 100%
     text-align: center
     .about__para
       margin: 12px auto
       margin-bottom: 24px
       max-width: 80vw
-      // font-size: 
+      width: 100%
       @include fluid-type(370px, 768px, 14px , 16px)
